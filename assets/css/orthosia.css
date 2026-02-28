@@ -342,10 +342,9 @@ img{max-width:100%;display:block}
    ============================== */
 .hero-product{
   position:absolute;
-  left:560px;
-  top:-80px;
+  left:620px;     /* biraz daha sağa */
+  top:-40px;      /* biraz aşağı */
   width:640px;
-  height:auto;
   z-index:0;
 }
 .hero-product img{width:100%;height:auto;display:block}
@@ -372,15 +371,11 @@ img{max-width:100%;display:block}
 }
 .hero-product .olives{
   position:absolute;
-  left:-30%;
-  bottom:-10px;
+  left:-18%;      /* biraz sağa */
+  bottom:-6px;    /* şişe tabanı hizası */
+  width:480px;
   transform:translateX(-50%);
-  width:500px;
-  height:auto;
-  pointer-events:none;
   z-index:-1;
-  opacity:.95;
-  filter:drop-shadow(0px 16px 24px rgba(0,0,0,0.12));
 }
 
 /* =========================
