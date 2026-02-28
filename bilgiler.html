@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Faydalı Bilgiler | Orthosia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/orthosia.css" />
+</head>
+<body>
+
+<!-- Üstten sarkan zeytin -->
+<img src="images/olive-decore.png" class="top-olive" alt="">
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="images/orthosia-logo-black.png" alt="Orthosia">
+    </a>
+
+    <nav class="menu">
+      <a href="index.html">Anasayfa</a>
+      <a href="hikayemiz.html">Hikayemiz</a>
+      <a href="urunler.html">Ürünler</a>
+      <a href="bilgiler.html" class="active">Faydalı Bilgiler</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+
+    <div class="h2" style="font-family:'Gilroy',sans-serif;font-weight:500;color:#85762F;">
+      Faydalı Bilgiler
+    </div>
+
+    <div style="height:32px"></div>
+
+    <div class="p" style="max-width:860px;">
+      Zeytinyağı seçimi, saklama koşulları, tadım notları ve üretim süreci hakkında
+      kısa rehberler yakında burada yer alacak.
+    </div>
+
+    <div style="height:24px"></div>
+
+    <div class="p" style="max-width:860px;">
+      Orthosia olarak üretimde şeffaflık ve izlenebilirlik bizim için temel prensiptir.
+      Hasattan şişelemeye kadar tüm süreci sade ve net bir yaklaşımla aktarmayı hedefliyoruz.
+    </div>
+
+  </div>
+</main>
+
+<div class="footer">
+  <div class="container">© Orthosia</div>
+</div>
+<script>
+(() => {
+  const el = document.querySelector('.top-olive');
+  if (!el) return;
+
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const y = window.scrollY || 0;
+
+    // 0 → 2px arası çok hafif hareket (scroll arttıkça çok az aşağı)
+    const p = Math.min(2, y * 0.002);
+
+    el.style.setProperty('--olive-parallax', p.toFixed(2) + 'px');
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+
+  update();
+})();
+</script>
+</body>
+</html>

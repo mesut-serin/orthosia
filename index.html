@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orthosia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/orthosia.css" />
+</head>
+<body>
+
+  <!-- ÜST DEKOR -->
+  <img src="images/olive-decore.png" class="top-olive" alt="" aria-hidden="true">
+
+  <!-- HEADER (Logo solda, menü altta tek satır) -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="images/orthosia-logo-black.png" alt="Orthosia">
+      </a>
+
+      <nav class="menu">
+        <a href="index.html" class="active">Anasayfa</a>
+        <a href="hikayemiz.html">Hikayemiz</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="bilgiler.html">Faydalı Bilgiler</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN HERO BOŞ ALAN + SLOGAN -->
+  <section class="hero-blank">
+
+    <!-- SOL: Slogan + metin + buton -->
+    <div class="slogan-box">
+      <div class="slogan-title">
+        <span class="slogan-line1">Güneş, toprak ve</span><br>
+        <span class="slogan-line2">saf emekten gelen<br>en doğal lezzet</span>
+      </div>
+
+      <div class="slogan-sub">
+        Bu şişe sadece Orthosia'nın güneşini, kadim topraklarımızın bereketini ve
+        asırlık zeytin ağaçlarımızın huzurunu içerir. Bir de, itina ile toplayıp,
+        özenle seçtiğimiz zeytinlerimizden, soğuk sıkım yöntemi ile elde ettiğimiz
+        buram buram Orthoisa kokan zeytinyağımız var tabi.
+      </div>
+
+      <a href="urunler.html" class="slogan-btn">Ürünleri gör</a>
+    </div>
+
+    <!-- SAĞ: Şişe + zeytin taneleri -->
+    <div class="hero-product">
+      <img src="images/early-harvest1.png" alt="Orthosia Early Harvest">
+      <img src="images/olives1.png" class="olives" alt="" aria-hidden="true">
+    </div>
+
+  </section>
+
+  <div class="footer">
+    <div class="container">© Orthosia</div>
+  </div>
+
+  <script>
+    // Ultra-soft parallax (2–3px)
+    (function () {
+      const root = document.documentElement;
+      const maxMove = 3; // px
+      let ticking = false;
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+
+        requestAnimationFrame(() => {
+          const y = window.scrollY || 0;
+          // 0..600px scroll aralığında 0..3px hareket
+          const move = Math.min(maxMove, (y / 600) * maxMove);
+          root.style.setProperty('--oliveY', move.toFixed(2) + 'px');
+          ticking = false;
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+
+</body>
+</html>

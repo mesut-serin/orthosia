@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>İletişim | Orthosia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/orthosia.css" />
+</head>
+<body>
+
+  <img class="top-olive" src="images/olive-decore.png" alt="" aria-hidden="true">
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="images/orthosia-logo-black.png" alt="Orthosia">
+      </a>
+
+      <nav class="menu" aria-label="Ana Menü">
+        <a href="index.html">Anasayfa</a>
+        <a href="hikayemiz.html">Hikayemiz</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="bilgiler.html">Faydalı Bilgiler</a>
+        <a href="iletisim.html" class="active">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <header class="contact-head">
+        <h1 class="contact-title">İletişim</h1>
+        <p class="contact-sub">
+          Teklif, satın alma ve iş birlikleri için bize ulaşın. En kısa sürede dönüş yaparız.
+        </p>
+      </header>
+
+      <section class="contact-grid" aria-label="İletişim alanı">
+
+        <!-- SOL ÜST: Bilgi paneli -->
+        <div class="contact-panel contact-panel--info">
+          <div class="contact-kicker">Orthosia, bir Serin Agro Gıda ve Tarım Ltd. Şti. markasıdır.</div>
+
+          <div class="contact-list" aria-label="İletişim bilgileri">
+
+            <div class="contact-row">
+              <div class="k">E-posta</div>
+              <a class="v" href="mailto:info@serinagro.com.tr">info@serinagro.com.tr</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="k">Telefon</div>
+              <a class="v" href="tel:+905342540084">+90 534 254 00 84</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="k">Adres</div>
+              <div class="v">
+                Donduran Mah. 657. Sk. No:34 <br>
+                09350 Yenipazar, Aydın, TÜRKİYE
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="k">Web</div>
+              <a class="v" href="https://orthosia.com.tr" target="_blank" rel="noopener">orthosia.com.tr</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="k">Instagram</div>
+              <a class="v" href="https://instagram.com/orthosia.tr" target="_blank" rel="noopener">@orthosia.tr</a>
+            </div>
+
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn slogan-like" href="mailto:info@serinagro.com.tr">E-posta gönder</a>
+          </div>
+        </div>
+
+        <!-- SAĞ: Form -->
+        <form class="contact-form" action="#" method="post" aria-label="İletişim formu">
+          <label class="f">
+            <span>Ad Soyad</span>
+            <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+          </label>
+
+          <label class="f">
+            <span>E-posta</span>
+            <input type="email" name="email" placeholder="ornek@mail.com" required>
+          </label>
+
+          <label class="f">
+            <span>Konu</span>
+            <input type="text" name="subject" placeholder="Teklif / Satın alma / İş birliği">
+          </label>
+
+          <label class="f">
+            <span>Mesaj</span>
+            <textarea name="message" rows="6" placeholder="Kısaca iletmek istediklerinizi yazın..." required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn slogan-like" type="submit">Mesajı gönder</button>
+            <div class="form-note">
+              Mesajınıza en kısa zamanda geri dönüş yapacağız.
+              İsterseniz tlf. numaranızı bırakın sizi geri arayalım.
+            </div>
+          </div>
+        </form>
+
+        <!-- SOL ALT: Harita (ayrı kart) -->
+        <section class="contact-map" aria-label="Konum">
+          <header class="contact-map-head">
+            <h2>Konum</h2>
+            <a class="contact-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=37.832241,28.241789"
+               target="_blank" rel="noopener">
+              Google Maps’te aç
+            </a>
+          </header>
+
+          <div class="contact-map-frame">
+            <iframe
+  title="Orthosia Konum"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://maps.google.com/maps?q=37.832241,28.241789&z=14&output=embed">
+</iframe>
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+  </main>
+
+  <div class="footer">
+    <div class="container">© Orthosia</div>
+  </div>
+
+</body>
+</html>
